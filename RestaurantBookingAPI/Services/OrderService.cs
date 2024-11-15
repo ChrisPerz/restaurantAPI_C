@@ -19,10 +19,9 @@ namespace RestaurantBookingAPI.Services
             int currentDish = 0;
 
             // Itera sobre todos los platos en la orden
-            for(int i = 1; i < orderRequest.DishIds.Length; i++)
+            for(int i = 0; i < orderRequest.DishIds.Length; i++)
             {
-                // Asigna el plato actual a la variable
-                currentDish = orderRequest.DishIds[i - 1];
+                currentDish = orderRequest.DishIds[i];
 
                 // Crea un objeto con la información de la orden para enviarla
                 var orderData = new
